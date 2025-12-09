@@ -6,9 +6,9 @@ const easeOutQuad = (t: number) => t * (2 - t);
 const Stats = () => {
   const stats = [
     { value: 98, suffix: "%", label: "Satisfaction Rate" },
-    { value: 30, suffix: "+", label: "Years of Experience" },
-    { value: 1000, suffix: "+", label: "Researchers Guided" },
-    { value: 80, suffix: "", label: "Training Workshops" },
+    { value: 10, suffix: "+", label: "Years of Experience" },
+    { value: 500, suffix: "+", label: "Researchers Guided" },
+    { value: 300, suffix: "", label: "Training Workshops" },
   ];
 
   const [isVisible, setIsVisible] = useState(false);

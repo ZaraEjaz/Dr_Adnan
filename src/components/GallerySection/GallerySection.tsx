@@ -4,13 +4,12 @@ interface GallerySectionProps {
   title?: string;
 }
 
-const GallerySection = ({ title = "Research & Training Gallery" }: GallerySectionProps) => {
+const GallerySection = ({ title = "Medical Research & Training Gallery" }: GallerySectionProps) => {
   // 1. Automatically generate the list of your 8 local images
   // This creates an array: ["/images/g_image_1.webp", ..., "/images/g_image_8.webp"]
-  const localImages = Array.from({ length: 8 }, (_, i) => `/images/g_image_${i + 1}.webp`);
+  const localImages = Array.from({ length: 18 }, (_, i) => `/images/g_image_${i + 1}.webp`);
 
   // 2. We duplicate the array 4 times. 
-  // Why? To ensure the strip is long enough to cover wide screens 
   // so the user never sees a "gap" in the infinite loop.
   const galleryStrip = [...localImages, ...localImages, ...localImages, ...localImages];
 

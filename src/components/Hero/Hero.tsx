@@ -1,5 +1,5 @@
-import { useState } from 'react'; // 1. Added useState
-import { Star, ArrowRight, Search, MessageCircle, X, Smartphone } from 'lucide-react'; // 2. Added new icons
+import { useState } from 'react';
+import { Star, ArrowRight, MessageCircle, X, Smartphone } from 'lucide-react';
 import OptimizedImage from '../OptimizedImage/OptimizedImage';
 
 const Hero = () => {
@@ -31,7 +31,7 @@ const Hero = () => {
             <div className="inline-flex items-center space-x-2 px-3 py-1 bg-blue-50 border border-blue-100 rounded-full">
               <Star className="w-4 h-4 text-blue-600 fill-blue-600" />
               <span className="text-sm font-semibold text-blue-900">
-                Trusted by 3,000+ Researchers
+                Trusted by Researchers around the globe.
               </span>
             </div>
 
@@ -72,7 +72,7 @@ const Hero = () => {
             </div>
           </div>
 
-          {/* RIGHT SIDE IMAGE + MINI-CARD */}
+          {/* RIGHT SIDE IMAGE + FLOATING LOGO */}
           <div className="relative">
             <div className="relative bg-gradient-to-br from-blue-200 to-blue-300 rounded-[3rem] overflow-hidden shadow-2xl">
               <div className="w-full h-[500px]">
@@ -84,50 +84,15 @@ const Hero = () => {
               </div>
             </div>
 
-            {/* MINI CARD (Floating box) */}
-            <div className="absolute -bottom-6 -left-6 md:left-4 bg-white rounded-3xl shadow-2xl p-6 max-w-xs hover:scale-105 transition-transform">
-              <div className="flex items-center justify-between mb-4">
-                <h3 className="font-semibold text-gray-900">Popular Services</h3>
-              </div>
-
-              <div className="space-y-2 mb-4">
-                {/* Mini Item 1 */}
-                <div className="flex items-center space-x-4">
-                  <div className="w-10 h-10 rounded-full overflow-hidden">
-                    <img
-                      src="https://images.pexels.com/photos/5905492/pexels-photo-5905492.jpeg?auto=compress&cs=tinysrgb&w=100"
-                      alt="Service"
-                      className="w-full h-full object-cover"
-                      loading="lazy" 
-                    />
-                  </div>
-                  <div>
-                    <p className="font-medium text-sm text-gray-900">
-                      Thesis Writing & Guidance
-                    </p>
-                    <p className="text-xs text-gray-500">Complete academic support</p>
-                  </div>
-                </div>
-
-                {/* Mini Item 2 */}
-                <div className="flex items-center space-x-3">
-                  <div className="w-10 h-10 rounded-full overflow-hidden">
-                    <img
-                      src="https://images.pexels.com/photos/4386466/pexels-photo-4386466.jpeg?auto=compress&cs=tinysrgb&w=100"
-                      alt="Service"
-                      className="w-full h-full object-cover"
-                      loading="lazy"
-                    />
-                  </div>
-                  <div>
-                    <p className="font-medium text-sm text-gray-900">
-                      Data Analysis for Research
-                    </p>
-                    <p className="text-xs text-gray-500">SPSS • Excel • Statistical tools</p>
-                  </div>
-                </div>
-              </div>
+            {/* --- REPLACED COMPONENT: FLOATING LOGO --- */}
+            <div className="absolute -bottom-10 -left-6 md:-left-12 bg-none  hover:scale-105 transition-transform duration-300 ">
+               <img
+                 src="/images/Logo.webp"
+                 alt="Prof. Dr. Adnan Logo"
+                 className="w-30 h-30 md:w-40 md:h-40 object-contain drop-shadow-md rounded-[3rem]"
+               />
             </div>
+
           </div>
         </div>
       </div>

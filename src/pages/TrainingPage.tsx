@@ -19,9 +19,11 @@ const bannerImages = [
 const TrainingPage = () => {
   const [searchTerm, setSearchTerm] = useState("");
   const [currentImageIndex, setCurrentImageIndex] = useState(0);
-  
-  // State for toggling between National and International views
   const [activeTab, setActiveTab] = useState('national');
+
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  }, []);
 
   // Carousel Logic
   useEffect(() => {
@@ -52,7 +54,7 @@ const TrainingPage = () => {
             <div className="space-y-6">
               <h1 className="text-4xl md:text-5xl font-bold text-gray-900 leading-tight">
                 Training Sessions <br />
-                <span className="text-blue-600">& Resources</span>
+                & Resources
               </h1>
               <p className="text-lg text-gray-600 max-w-lg">
                 Explore our comprehensive library of medical education materials,
@@ -66,7 +68,7 @@ const TrainingPage = () => {
                   placeholder="Search PDFs & topics..."
                   value={searchTerm}
                   onChange={(e) => setSearchTerm(e.target.value)}
-                  className="w-full pl-12 pr-4 py-3 bg-gray-50 border border-gray-200 rounded-full focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent transition-all shadow-sm"
+                  className="w-full pl-12 pr-4 py-3 bg-gray-50 border border-gray-200 rounded-full focus:border-transparent transition-all shadow-sm"
                 />
               </div>
             </div>
@@ -95,11 +97,9 @@ const TrainingPage = () => {
       </section>
 
       {/* --- 2. COMPACT REGION TOGGLE (STICKY) --- */}
-      {/* Reduced padding, removed vertical stacking, uses segmented control style */}
       <section className="sticky top-16 z-30 bg-white/90 backdrop-blur-md border-b border-gray-200 py-3 shadow-sm">
-         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+         <div className="max-w-7xl mx-auto px-4 md:mt-5 sm:px-6 lg:px-8">
             <div className="flex flex-col items-center justify-center">
-                
                 {/* The Toggle Container */}
                 <div className="inline-flex bg-gray-100 p-1.5 rounded-xl relative w-full sm:w-auto">
                     {/* National Tab */}
@@ -120,7 +120,7 @@ const TrainingPage = () => {
                         onClick={() => setActiveTab('international')}
                         className={`flex-1 sm:flex-none flex items-center justify-center gap-2 px-4 py-2 rounded-lg text-sm font-bold transition-all duration-300 ${
                             activeTab === 'international' 
-                            ? 'bg-white text-blue-700 shadow-sm ring-1 ring-black/5' 
+                            ? 'bg-white text-[#001f54] shadow-sm ring-1 ring-black/5' 
                             : 'text-gray-500 hover:text-gray-700'
                         }`}
                     >
@@ -133,11 +133,11 @@ const TrainingPage = () => {
          </div>
       </section>
 
-      {/* Helper Text (Non-Sticky to save space on scroll) */}
+      {/* Helper Text */}
       <div className="bg-gray-50 pt-4 text-center">
         <p className="text-xs md:text-sm text-gray-500">
             Current Currency: 
-            <span className={`font-bold ml-1 ${activeTab === 'national' ? 'text-green-700' : 'text-blue-700'}`}>
+            <span className={`font-bold ml-1 ${activeTab === 'national' ? 'text-green-700' : 'text-[#001f54]'}`}>
                 {activeTab === 'national' ? 'PKR (Pakistani Rupee)' : 'INTL (USD/SAR)'}
             </span>
         </p>
@@ -149,7 +149,6 @@ const TrainingPage = () => {
           
           <div className="flex items-center justify-between mb-6">
             <h2 className="text-xl md:text-2xl font-bold text-gray-900 flex items-center gap-2">
-              <FileText className="w-5 h-5 md:w-6 md:h-6 text-gray-700" />
               Available Resources
             </h2>
             <span className="text-xs md:text-sm text-gray-500 bg-white px-3 py-1 rounded-full shadow-sm border">
@@ -164,7 +163,7 @@ const TrainingPage = () => {
               </p>
               <button 
                 onClick={() => setSearchTerm("")}
-                className="mt-4 text-blue-600 font-medium hover:underline"
+                className="mt-4 text-[#001f54] font-medium hover:underline"
               >
                 Clear Search
               </button>
@@ -184,15 +183,14 @@ const TrainingPage = () => {
                       loading="lazy"
                       className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
                     />
-                    {/* Badge on thumbnail indicating region */}
-                    <div className={`absolute top-2 left-2 px-2 py-1 rounded-md text-[10px] font-bold text-white shadow-sm ${activeTab === 'national' ? 'bg-green-600' : 'bg-blue-600'}`}>
+                    <div className={`absolute top-2 left-2 px-2 py-1 rounded-md text-[10px] font-bold text-white shadow-sm ${activeTab === 'national' ? 'bg-green-600' : 'bg-[#001f54]'}`}>
                         {activeTab === 'national' ? 'PKR' : 'INTL'}
                     </div>
                   </div>
 
                   {/* Content */}
                   <div className="p-5 flex-grow flex flex-col justify-center">
-                    <div className={`flex items-center space-x-2 text-xs font-bold mb-2 uppercase tracking-wide ${activeTab === 'national' ? 'text-green-600' : 'text-blue-600'}`}>
+                    <div className={`flex items-center space-x-2 text-xs font-bold mb-2 uppercase tracking-wide ${activeTab === 'national' ? 'text-green-600' : 'text-[#001f54]'}`}>
                       <Calendar className="w-3 h-3" />
                       <span>
                         {new Date(session.date).toLocaleDateString("en-US", {
@@ -219,13 +217,12 @@ const TrainingPage = () => {
                   {/* Action Button */}
                   <div className="p-5 md:w-48 flex-shrink-0 flex items-center justify-center border-t md:border-t-0 md:border-l border-gray-50 bg-gray-50/50">
                     <a
-                      // DYNAMIC LINK: Chooses the correct PDF based on the active tab
                       href={activeTab === 'national' ? session.pdfUrlNational : session.pdfUrlInternational}
                       download
                       className={`w-full md:w-auto flex items-center justify-center gap-2 border-2 text-white px-4 py-2.5 rounded-lg transition-all duration-300 font-semibold shadow-sm hover:shadow-lg text-sm ${
                           activeTab === 'national'
                           ? 'bg-green-600 border-green-600 hover:bg-green-700 hover:border-green-700'
-                          : 'bg-blue-600 border-blue-600 hover:bg-blue-700 hover:border-blue-700'
+                          : 'bg-[#001f54] border-[#001f54] hover:bg-blue-700 hover:border-blue-700'
                       }`}
                     >
                       <Download className="w-4 h-4" />
