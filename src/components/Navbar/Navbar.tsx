@@ -18,16 +18,14 @@ const Navbar = () => {
 
   // 3. Smart Scroll Function
   const scrollToSection = (id) => {
-    setIsOpen(false); // Close mobile menu first
+    setIsOpen(false); 
 
     if (location.pathname === '/') {
-      // If we are already on Home, just scroll
       const element = document.getElementById(id);
       if (element) {
         element.scrollIntoView({ behavior: 'smooth' });
       }
     } else {
-      // If we are on Training Page, go to Home AND tell it to scroll
       navigate('/', { state: { scrollTo: id } });
     }
   };
@@ -66,8 +64,8 @@ const Navbar = () => {
                 Courses
               </button>
               
-              <button onClick={() => scrollToSection('contact')} className="text-gray-300 hover:text-white font-medium transition-colors">
-                Contact
+              <button onClick={() => scrollToSection('services')} className="text-gray-300 hover:text-white font-medium transition-colors">
+                Services
               </button>
               
               <button 

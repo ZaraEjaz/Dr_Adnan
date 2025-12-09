@@ -1,5 +1,5 @@
 import { Link } from 'react-router-dom';
-import { FileText, Calendar, ArrowRight } from 'lucide-react';
+import { Calendar, ArrowRight } from 'lucide-react';
 import { trainingData } from '../../data/trainingData';
 
 const TrainingPreview = () => {

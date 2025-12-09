@@ -1,5 +1,5 @@
 import { useState, useEffect } from "react";
-import { Search, Calendar, Download, FileText, MapPin, Globe } from "lucide-react";
+import { Search, Calendar, Download, MapPin, Globe } from "lucide-react";
 import { trainingData } from "../data/trainingData"; 
 import Navbar from "../components/Navbar/Navbar";
 import Footer from "../components/Footer/Footer";
