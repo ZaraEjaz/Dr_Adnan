@@ -46,7 +46,7 @@ const Navbar = () => {
                 />
               </div>
               <span className="text-lg md:text-xl font-bold text-white tracking-tight">
-                Prof.Dr Adnan
+                Prof. Dr. Adnan Anwar
               </span>
             </div>
 
