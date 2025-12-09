@@ -38,7 +38,7 @@ const CourseSection = () => {
   ];
 
   return (
-    <section className="py-16 md:py-24 bg-gradient-to-br from-slate-50 via-white to-blue-50">
+    <section id = "courses" className="py-16 md:py-24 bg-gradient-to-br from-slate-50 via-white to-blue-50">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <motion.div
           variants={containerVariants}
@@ -139,10 +139,10 @@ const CourseSection = () => {
                         <motion.div
                           key={item.label}
                           whileHover={{ scale: 1.05 }}
-                          className="inline-flex items-center space-x-2 bg-green-50 border border-green-200 rounded-full px-4 py-2 hover:bg-green-100 transition-colors"
+                          className="inline-flex items-center space-x-2 bg-blue-50 border border-blue-200 rounded-full px-4 py-2 hover:bg-blue-100 transition-colors"
                         >
-                          <Icon className="w-4 h-4 text-green-600" />
-                          <span className="text-sm font-medium text-gray-900">{item.label}</span>
+                          <Icon className="w-4 h-4 text-blue-600" />
+                          <span className="text-sm font-medium text-blue-600">{item.label}</span>
                         </motion.div>
                       );
                     })}
@@ -180,7 +180,7 @@ const CourseSection = () => {
                       >
                         <button className="w-full bg-gradient-to-r from-green-600 to-emerald-600 text-white px-4 py-3 rounded-lg hover:from-green-700 hover:to-emerald-700 transition-all shadow-md hover:shadow-lg flex items-center justify-center space-x-2 font-semibold">
                           <Download className="w-5 h-5" />
-                          <span>Download National Brochure</span>
+                          <span>Download National</span>
                         </button>
                       </a>
                     </motion.div>
@@ -208,7 +208,7 @@ const CourseSection = () => {
                       >
                         <button className="w-full bg-gradient-to-r from-amber-600 to-orange-600 text-white px-4 py-3 rounded-lg hover:from-amber-700 hover:to-orange-700 transition-all shadow-md hover:shadow-lg flex items-center justify-center space-x-2 font-semibold">
                           <Download className="w-5 h-5" />
-                          <span>Download International Brochure</span>
+                          <span>Download International</span>
                         </button>
                       </a>
                     </motion.div>

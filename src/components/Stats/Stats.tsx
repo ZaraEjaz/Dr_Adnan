@@ -84,7 +84,7 @@ const StatItem = ({ value, suffix, label, shouldAnimate }: any) => {
   return (
     <div className="text-center">
       <h3 
-        className="text-4xl md:text-5xl font-bold text-gray-900 mb-2"
+        className="text-4xl md:text-5xl font-bold text-[#001f54] mb-2"
         // 'tabular-nums' keeps the number width constant so it doesn't wiggle
         style={{ fontVariantNumeric: "tabular-nums" }} 
       >

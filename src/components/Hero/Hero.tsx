@@ -54,7 +54,7 @@ const Hero = () => {
                 href={gmailLink}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="bg-gray-900 text-white px-8 py-3.5 rounded-full hover:bg-gray-800 transition-all shadow-lg hover:shadow-xl flex items-center justify-center space-x-2 group"
+                className="bg-[#001f54] text-white px-8 py-3.5 rounded-full hover:bg-[#001333] transition-all shadow-lg hover:shadow-xl flex items-center justify-center space-x-2 group"
               >
                 <span className="font-medium">Contact via Email</span>
                 <ArrowRight className="w-5 h-5 group-hover:translate-x-1 transition-transform" />

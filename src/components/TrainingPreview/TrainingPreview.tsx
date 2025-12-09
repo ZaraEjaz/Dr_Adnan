@@ -59,7 +59,7 @@ const TrainingPreview = () => {
         <div className="text-center">
           <Link
             to="/trainings"
-            className="inline-flex items-center space-x-2 bg-gray-900 text-white px-8 py-3.5 rounded-full hover:bg-gray-800 transition-all shadow-lg hover:shadow-xl group font-medium"
+            className="inline-flex items-center space-x-2 bg-[#001f54] text-white px-8 py-3.5 rounded-full hover:bg-[#001333] transition-all shadow-lg hover:shadow-xl group font-medium"
           >
             <span>View All Training Sessions</span>
             <ArrowRight className="w-5 h-5 group-hover:translate-x-1 transition-transform" />
