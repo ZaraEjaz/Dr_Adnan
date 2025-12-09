@@ -7,7 +7,7 @@ const Hero = () => {
   const [isModalOpen, setIsModalOpen] = useState(false);
 
   // --- CONFIGURATION ---
-  const whatsappNumber = "923272047558"; 
+  const whatsappNumber = "923212625053"; 
   const whatsappMessage = "Hello Dr. Adnan, I would like to inquire about research guidance.";
   
   // Create the link
