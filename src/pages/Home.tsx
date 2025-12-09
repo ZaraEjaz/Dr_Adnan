@@ -3,7 +3,9 @@ import Hero from '../components/Hero/Hero';
 import Stats from '../components/Stats/Stats';
 import Vision from '../components/Vision/Vision';
 import VirtualCare from '../components/VirtualCare/VirtualCare';
-import DoctorsSection from '../components/DoctorsSection/DoctorsSection';
+import GallerySection from '../components/GallerySection/GallerySection';
+import TrainingPreview from '../components/TrainingPreview/TrainingPreview';
+import CourseSection from '../components/CourseSection/CourseSection';
 import Footer from '../components/Footer/Footer';
 
 const Home = () => {
@@ -12,9 +14,11 @@ const Home = () => {
       <Navbar />
       <Hero />
       <Stats />
+      <GallerySection />
+      <TrainingPreview />
+      <CourseSection />
       <Vision />
       <VirtualCare />
-      <DoctorsSection />
       <Footer />
     </div>
   );
