@@ -47,7 +47,7 @@ const TrainingPreview = () => {
                   <h3 className="text-lg font-semibold text-gray-900 mb-2 leading-tight">
                     {session.title}
                   </h3>
-                  <p className="text-sm text-gray-600 mb-3 italic">
+                  <p className="text-sm text-gray-600 mb-3">
                     {session.insight}
                   </p>
                 </div>

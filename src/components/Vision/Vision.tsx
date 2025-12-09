@@ -4,15 +4,15 @@ const Vision = () => {
   const features = [
     {
       title: 'Patient-Centered Care',
-      description: 'We prioritize patient needs and preferences, ensuring personalized treatment.',
+      description: 'Prioritizing patient needs and preferences, ensuring personalized treatment.',
     },
     {
       title: 'Innovative Health Solutions',
-      description: 'We leverage cutting-edge technology and research to deliver healthcare services.',
+      description: 'leveraging cutting-edge technology and research to deliver healthcare services.',
     },
     {
-      title: 'Holistic Wellness',
-      description: 'We focus on care that nurtures both physical and mental well-being for a community.',
+      title: 'Holistic Illness',
+      description: 'I focus on care that nurtures both physical and mental Ill-being for a community.',
     },
   ];
 
@@ -30,10 +30,6 @@ const Vision = () => {
             <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold text-gray-900 leading-tight">
               Finding health solutions with top Experts
             </h2>
-
-            <button className="bg-gray-900 text-white px-8 py-3.5 rounded-full hover:bg-gray-800 transition-all shadow-lg hover:shadow-xl font-medium">
-              About Us
-            </button>
           </div>
 
           <div className="space-y-6">

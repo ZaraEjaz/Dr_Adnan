@@ -34,10 +34,6 @@ const VirtualCare = () => {
                 </div>
               ))}
             </div>
-
-            <button className="bg-gray-900 text-white px-8 py-3.5 rounded-full hover:bg-gray-800 transition-all shadow-lg hover:shadow-xl font-medium">
-              Learn more
-            </button>
           </div>
 
           <div className="relative order-1 lg:order-2">
