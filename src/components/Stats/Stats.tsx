@@ -8,7 +8,8 @@ const Stats = () => {
     { value: 98, suffix: "%", label: "Satisfaction Rate" },
     { value: 10, suffix: "+", label: "Years of Experience" },
     { value: 500, suffix: "+", label: "Researchers Guided" },
-    { value: 300, suffix: "", label: "Training Workshops" },
+    { value: 300, suffix: "+", label: "Training Workshops" },
+    { value: 100, suffix: "+", label: "Publications" },
   ];
 
   const [isVisible, setIsVisible] = useState(false);
@@ -34,7 +35,7 @@ const Stats = () => {
   return (
     <section ref={sectionRef} className="py-12 md:py-16 bg-white">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="grid grid-cols-2 md:grid-cols-4 gap-8 md:gap-12">
+        <div className="grid grid-cols-2 md:grid-cols-5 gap-8 md:gap-12">
           {stats.map((stat, index) => (
             <StatItem
               key={index}

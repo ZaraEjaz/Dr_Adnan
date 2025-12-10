@@ -1,5 +1,5 @@
 import { useState } from 'react';
-import { Star, ArrowRight, MessageCircle, X, Smartphone } from 'lucide-react';
+import { Star, ArrowRight, MessageCircle, X, Smartphone, Award } from 'lucide-react'; // Added Award icon
 import OptimizedImage from '../OptimizedImage/OptimizedImage';
 
 const Hero = () => {
@@ -43,12 +43,28 @@ const Hero = () => {
               Guidance
             </h1>
 
-            <p className="text-gray-600 text-lg md:text-xl max-w-xl">
-              Led by <strong>Prof. Dr. Adnan Anwar</strong>. I bridge the gap between complex data and successful publication 
-              with expert thesis guidance and statistical analysis.
-            </p>
+            <div>
+              <p className="text-gray-600 text-lg md:text-xl max-w-xl mb-6">
+                Led by <strong>Prof. Dr. Adnan Anwar</strong>. I bridge the gap between complex data and successful publication 
+                with expert guidance and statistical analysis.
+              </p>
 
-            <div className="flex flex-col sm:flex-row gap-4">
+              {/* --- QUALIFICATIONS BLOCK --- */}
+              <div className="flex flex-col gap-2 max-w-lg">
+                <div className="flex items-start gap-2">
+                   <h3 className="font-bold text-[#001f54] text-base md:text-lg leading-snug">
+                     MBBS, M.Phil, CHPE, CRCP, PCEPT, PhD Scholar
+                   </h3>
+                </div>
+                <div className="text-gray-700 text-sm md:text-base space-y-1 pl-7 font-medium">
+                    <p>• Professor of Physiology</p>
+                    <p>• Director, The Research Professionals</p>
+                    <p>• Certified Medical Research Trainer</p>
+                </div>
+              </div>
+            </div>
+
+            <div className="flex flex-col sm:flex-row gap-4 pt-2">
               {/* --- EMAIL BUTTON --- */}
               <a 
                 href={gmailLink}
@@ -84,12 +100,12 @@ const Hero = () => {
               </div>
             </div>
 
-            {/* --- REPLACED COMPONENT: FLOATING LOGO --- */}
-            <div className="absolute -bottom-10 -left-6 md:-left-12 bg-none  hover:scale-105 transition-transform duration-300 ">
+            {/* --- FLOATING LOGO --- */}
+            <div className="absolute -bottom-10 -left-6 md:-left-12 bg-none hover:scale-105 transition-transform duration-300">
                <img
                  src="/images/Logo.webp"
                  alt="Prof. Dr. Adnan Logo"
-                 className="w-30 h-30 md:w-40 md:h-40 object-contain drop-shadow-md rounded-[3rem]"
+                 className="w-20 h-20 md:w-40 md:h-40 object-contain drop-shadow-md rounded-[3rem]"
                />
             </div>
 

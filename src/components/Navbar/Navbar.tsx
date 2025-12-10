@@ -17,7 +17,7 @@ const Navbar = () => {
   const qrCodeUrl = `https://api.qrserver.com/v1/create-qr-code/?size=250x250&data=${encodeURIComponent(whatsappUrl)}`;
 
   // 3. Smart Scroll Function
-  const scrollToSection = (id) => {
+  const scrollToSection = (id: string) => {
     setIsOpen(false); 
 
     if (location.pathname === '/') {
@@ -63,6 +63,10 @@ const Navbar = () => {
               <button onClick={() => scrollToSection('courses')} className="text-gray-300 hover:text-white font-medium transition-colors">
                 Courses
               </button>
+
+              <button onClick={() => scrollToSection('publications')} className="text-gray-300 hover:text-white font-medium transition-colors">
+                Publications
+              </button>
               
               <button onClick={() => scrollToSection('services')} className="text-gray-300 hover:text-white font-medium transition-colors">
                 Services
@@ -93,20 +97,19 @@ const Navbar = () => {
               <button onClick={() => scrollToSection('home')} className="block w-full text-left px-4 py-3 text-gray-300 hover:bg-[#002a70] hover:text-white rounded-lg font-medium">
                 Home
               </button>
-              
-              {/* Mobile Links updated as well */}
-              <button onClick={() => scrollToSection('services')} className="block w-full text-left px-4 py-3 text-gray-300 hover:bg-[#002a70] hover:text-white rounded-lg font-medium">
-                Services
-              </button>
               <button onClick={() => scrollToSection('training')} className="block w-full text-left px-4 py-3 text-gray-300 hover:bg-[#002a70] hover:text-white rounded-lg font-medium">
                 Training
               </button>
               <button onClick={() => scrollToSection('courses')} className="block w-full text-left px-4 py-3 text-gray-300 hover:bg-[#002a70] hover:text-white rounded-lg font-medium">
                 Courses
               </button>
-              <button onClick={() => scrollToSection('contact')} className="block w-full text-left px-4 py-3 text-gray-300 hover:bg-[#002a70] hover:text-white rounded-lg font-medium">
-                Contact
+              <button onClick={() => scrollToSection('publications')} className="block w-full text-left px-4 py-3 text-gray-300 hover:bg-[#002a70] hover:text-white rounded-lg font-medium">
+                Publications
               </button>
+              <button onClick={() => scrollToSection('services')} className="block w-full text-left px-4 py-3 text-gray-300 hover:bg-[#002a70] hover:text-white rounded-lg font-medium">
+                Services
+              </button>
+              
               
               <div className="pt-2 px-2">
                 <button 
